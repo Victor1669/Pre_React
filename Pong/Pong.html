@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./SCSS/pong.css">
+</head>
+<body onload="telaInicial()" onkeydown="mover()">
+    <div id="inicio">
+        <div class="titulo">
+            <h1 style="color: red;">Pong</h1>
+            <button class="btn btn-outline-success" id="jogar" onclick="jogar()">Jogar</button>
+            <button class="btn btn-outline-warning" id="configurar" onclick="configuracoes()">Configurar</button>
+        </div>
+        <div id="opcoes">
+            <div class="cfg1">
+                <label for="cfg1_txt">Tamanho da raquete:</label>
+                <input  max="60" size="60" type="range" id="cfg1_txt" value="30">
+                <div id="raqueteFalsa"></div>
+            </div>
+            <div class="cfg2">
+                <label for="cfg2_txt">Tamanho da bola:</label>
+                <input size="180" type="range" id="cfg2_txt" value="100">
+                <div id="bolaFalsa"></div>
+            </div>
+            <div class="cfg3">
+                <label for="cfg3_txt">Cor da raquete:</label>
+                <input size="15" type="color" id="cfg3_txt" value="#000000">
+                <div id="corRaquete"></div>
+            </div>
+            <div class="cfg4">
+                <label for="cfg4_txt">Cor da bola:</label>
+                <input size="15" type="color" id="cfg4_txt" value="#ff0000">
+                <div id="corBola"></div>
+            </div>
+            <!-- <div class="cfg5">
+                <label for="cfg5_txt">Largura da tela:</label>
+                <input size="15" type="number" id="cfg5_txt" value="#000000">
+                <div id="corRaquete"></div>
+            </div>
+            <div class="cfg6">
+                <label for="cfg6_txt">Altura da bola:</label>
+                <input size="15" type="number" id="cfg6_txt" value="#ff0000">
+                <div id="corBola"></div>
+            </div> -->
+        </div>
+    </div>
+    <div class="titulo2">
+        <h1>Pong</h1>
+        <button class="btn btn-outline-success" id="iniciar" onclick="despausar()">Iniciar</button>
+        <button class="btn btn-outline-warning" onclick="telaInicial()">Tela Inicial</button>
+    </div>
+    <div id="container">
+        <div class="pontos">
+            <p id="ponto1">0</p>
+            <p id="resultado"></p>
+            <p id="ponto2">0</p>
+        </div>
+        <div id="raquete1"></div>
+        <div id="esfera"></div>
+        <div id="raquete2"></div>
+        <button id="pausa" onclick="">▐▐</button>
+        <button id="despausa" onclick="despausar()">▶</button>
+    </div>
+    <nav>
+        <a style="display: none;" href="../index.html">Site Original</a>
+    </nav>
+    <script defer src="Pong.js"></script>
+</body>
+</html>

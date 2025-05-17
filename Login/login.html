@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Login/SCSS/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="pt1">
+        <img id="um" src="../IMAGENS/netflix.jpg" alt="Imagem com vários filmes e séries do catálogo Netflix">
+        <img id="dois" src="../IMAGENS/netflix2.jpg" alt="Imagem com vários filmes e séries do catálogo Netflix">
+    </div>
+    <div class="pt2">
+        <div class="logo">FILMES</div>
+        <div class="content">
+            <form autocomplete="on">
+                <label for="email">Email:</label><input required autocomplete="on" id="email" placeholder="seu_nome@gmail.com" type="email">
+                <label for="senha">Senha:</label><input required autocomplete="on" id="senha" placeholder="********" type="password">
+                <button id="submit" onclick="Acesso(event)">Acessar</button>
+            </form>      
+            <p style="color: white;">Não tem conta? <a href="../CONT_login/cont.html">Cadastre-se</a></p>   
+        </div>
+        <script defer src="./login.js"></script>
+    </div>
+</body>
+</html>

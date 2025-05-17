@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./SCSS/calc.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div class="calculadora">
+        <input maxlength="12" autocomplete="off" placeholder="0" id="tela"></input>
+        <div onclick="limpar()" id="clear">C</div>
+        <div class="botoes">
+            <div onclick="digitar(7)" class="btn">7</div>
+            <div onclick="digitar(8)" class="btn">8</div>
+            <div onclick="digitar(9)" class="btn">9</div>
+            <div onclick="digitar('/')" class="btn">/</div>
+            <div onclick="digitar(4)" class="btn">4</div>
+            <div onclick="digitar(5)" class="btn">5</div>
+            <div onclick="digitar(6)" class="btn">6</div>
+            <div onclick="digitar('*')" class="btn">*</div>
+            <div onclick="digitar(1)" class="btn">1</div>
+            <div onclick="digitar(2)" class="btn">2</div>
+            <div onclick="digitar(3)" class="btn">3</div>
+            <div onclick="digitar('-')" class="btn">-</div>
+            <div onclick="digitar(0)" class="btn">0</div>
+            <div onclick="digitar('.')" class="btn">.</div>
+            <div id="calculo" onclick="calcular()" class="btn">=</div>
+            <div onclick="digitar('+')" class="btn">+</div>
+        </div>
+    </div>
+    <nav>
+        <a href="../index.html">Site Original</a>
+    </nav>
+    <script src="calc.js"></script>
+</body>
+</html>

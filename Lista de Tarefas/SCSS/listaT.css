@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  width: 35px;
+  accent-color: green;
+}
+
+input, #textoP, .textoP2 {
+  margin: 20px;
+}
+
+#textoP, .textoP2 {
+  width: 55vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+#textoP:focus, .textoP2:focus {
+  outline: none;
+}
+
+#adicionar, #apagar {
+  width: 10vw;
+}
+#adicionar:hover, #apagar:hover {
+  opacity: 0.8;
+}
+
+#adicionar {
+  background: darkgreen;
+  color: white;
+}
+
+#apagar {
+  background: red;
+}
+
+.main, .tarefa, .concluidas {
+  width: 65vw;
+  height: 115px;
+  margin: 20px;
+}
+
+.main, .tarefa {
+  background: lightgray;
+  border: 1px solid black;
+  display: flex;
+}
+
+.concluidas {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.normal {
+  text-decoration-line: none;
+  background-color: lightgray;
+}
+
+.clicado {
+  background-color: rgb(136, 255, 123);
+}
+.clicado p {
+  text-decoration-line: line-through;
+}/*# sourceMappingURL=listaT.css.map */
