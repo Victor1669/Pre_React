@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: grid;
+}
+:root{
+    --contWidth: 80vw;
+    --contLeft: calc((100vw - var(--contWidth)) / 2);
+    --distancia: 10vw;
+
+    --bolaSize: 5vw;
+    --bolaLeft: 0px;
+    --bolaTop: 0px;
+    --bolaCor: ;
+
+    --raq1Top: 0px;
+    --raqCor: ;
+
+    --raq2Top: 0px;
+    --raqCor: ;
+}
+.container{
+    display: grid;
+    grid-template-areas: 'content';
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    position: absolute;
+    :nth-child(1), :nth-child(2){
+        align-self: center;
+        grid-area: content;
+        position: relative;
+    }
+    :nth-child(1){
+        justify-self: start;
+        left: var(--distancia);
+    }
+    :nth-child(2){
+        justify-self: end;
+        right: var(--distancia);
+    }
+
+    width: var(--contWidth);
+    height: 40vw;
+    top: 80px;
+    left: var(--contLeft);
+    border: 2px solid black;
+
+}
+.bola{
+    grid-area: content;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+
+    border-radius: 100%;
+    width: var(--bolaSize);
+    height: var(--bolaSize);
+    background: var(--bolaCor);
+    top: var(--bolaTop);
+    left: var(--bolaLeft);
+}
+#Raquete_1, #Raquete_2{
+    background: --raqCor;
+}
+#Raquete_1{
+    top: var(--raq1Top);
+}
+#Raquete_2{
+    top: var(--raq2Top);
+}

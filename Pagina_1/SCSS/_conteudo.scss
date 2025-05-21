@@ -1,0 +1,25 @@
+.parte_img{
+    grid-area: Texto;
+}
+#escudo2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+.shape{
+    shape-outside: circle(50%);
+    clip-path: circle(100%);
+    translate: 0 10px;
+    float: left;
+    width: 275px;
+    height: 200px;
+}
+#container{
+    width: 100%;
+    p{
+        &::first-letter{
+            font-size: 2rem;
+        }
+        text-indent: 2rem;
+    }
+}

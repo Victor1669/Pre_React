@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    height: 100vh;
+    width: 116vw;
+    display: grid;
+    overflow: hidden;
+    grid-template-areas: 
+    'Header Header Header Header Header Header Menu1'
+    'Pilar1 .   subHeader subHeader  .  btn1 Menu1'
+    'Pilar1 Texto  Texto  Texto  Texto  Pilar2 Menu1'
+    'Pilar1 .      .      .      .      Footer Menu1';
+    grid-template-rows: 15vh 15vh 50vh 20vh;
+    grid-template-columns: 16vw 17vw 17vw 17vw 17vw 16vw 18vw;
+}
+#lista{
+    display: grid;
+    grid-template-areas: 
+    'Um'
+    'Dois'
+    'Tres'
+    'Quatro'
+    'Cinco'
+    'Seis'
+    'Sete';
+    grid-template-rows: 14vh 7vh 7vh 7vh 7vh 7vh 7vh 7vh;
+    grid-template-columns: 18vw;
+    a{
+        align-self: center;
+        &:nth-child(1){
+            grid-area: Um;
+        }
+        &:nth-child(2){grid-area: Dois;}
+        &:nth-child(3){grid-area: Tres;}
+        &:nth-child(4){grid-area: Quatro;}
+        &:nth-child(5){grid-area: Cinco;}
+        &:nth-child(6){grid-area: Seis;}
+        &:nth-child(7){grid-area: Sete;}
+    }
+}
