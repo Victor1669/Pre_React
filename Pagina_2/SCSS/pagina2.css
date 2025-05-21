@@ -1,17 +1,19 @@
 :root[light] {
   --backColor: gray;
-  --textColor: black;
-  --divColor: red;
+  --contColor: rgb(180, 232, 253);
+  --contShadow: black;
+  --titleColor: black;
 }
 
 :root[dark] {
   --backColor: black;
-  --textColor: white;
-  --divColor: blue;
+  --contColor: dodgerblue;
+  --titleColor: white;
 }
 
 * {
   box-sizing: border-box;
+  transition: 0.5s;
 }
 
 html {
@@ -25,26 +27,88 @@ body {
   align-items: center;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
-  transition: color 0.5s;
   background: var(--backColor);
-  color: var(--textColor);
+  color: black;
 }
 
-button {
+h1, h2 {
+  color: var(--titleColor);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+}
+input:focus {
+  outline-style: none;
+}
+
+#btn1 {
   width: 150px;
-  height: 100px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
 
-nav {
-  margin-top: 30%;
+#show[visivel] {
+  background: var(--contColor) url(../../IMAGENS/olho.png) no-repeat center center;
+  background-size: 50%;
 }
 
-#teste {
-  width: clamp(400px, 75vw, 800px);
-  height: 100px;
-  background: var(--divColor);
+#show[invisivel] {
+  background: var(--contColor) url(../../IMAGENS/visualizar.png) no-repeat center center;
+  background-size: 50%;
 }
 
-body, #teste {
-  transition: 0.5s;
+#show {
+  position: relative;
+  width: 50px;
+  text-align: center;
+  border: none;
+}
+
+#ipt3 {
+  width: calc(100% - 50px);
+}
+
+#enviar {
+  justify-self: flex-end;
+  padding: 10px 15px;
+  width: 60%;
+  cursor: pointer;
+  margin: 25px 0 25px 0;
+}
+
+.container {
+  height: 600px;
+  width: 400px;
+  padding: 30px;
+  margin: 0;
+  border-radius: 30px;
+  display: grid;
+  background: var(--contColor);
+  box-shadow: 0px 8px 20px 5px var(--contShadow);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nome, .email, .senha {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 5px 15px;
 }/*# sourceMappingURL=pagina2.css.map */
